@@ -1,0 +1,58 @@
+{
+    "Cart": [
+      {
+        "id": "c43c",
+        "userName": "lilen",
+        "name": "Paneer Tikka",
+        "category": "Starter",
+        "price": 250,
+        "description": "Marinated cottage cheese cubes grilled to perfection.",
+        "quantity": 1
+      },
+      {
+        "id": "c43c",
+        "userName": "ggbidkar",
+        "name": "Paneer Tikka",
+        "category": "Starter",
+        "price": 250,
+        "description": "Marinated cottage cheese cubes grilled to perfection.",
+        "quantity": 1
+      },
+      {
+        "id": "0a6d",
+        "userName": "lilen",
+        "name": "Dahi Puri",
+        "category": "Starter",
+        "price": 120,
+        "description": "Crispy puris filled with yogurt, chutneys, and spices.",
+        "quantity": 1
+      },
+      {
+        "id": "efaa",
+        "userName": "lilen",
+        "name": "Masala Papad",
+        "category": "Starter",
+        "price": 60,
+        "description": "Crispy papad topped with chopped vegetables and spices.",
+        "quantity": 1
+      },
+      {
+        "id": "0a6d",
+        "userName": "lilen",
+        "name": "Dahi Puri",
+        "category": "Starter",
+        "price": 120,
+        "description": "Crispy puris filled with yogurt, chutneys, and spices.",
+        "quantity": 1
+      },
+      {
+        "id": "a01b",
+        "userName": "lilen",
+        "name": "Dal Tadka",
+        "category": "Main Course",
+        "price": 150,
+        "description": "Yellow lentils tempered with spices and garnished with coriander.",
+        "quantity": 1
+      }
+    ]
+  }
