@@ -1,0 +1,107 @@
+{
+	"_version": "1.58.0",
+	"sap.app": {
+		"id": "vendor",
+		"i18n": {
+			"bundleUrl": "i18n/i18n.properties",
+			"supportedLocales": [
+				""
+			],
+			"fallbackLocale": ""
+		},
+		"title": "appTitle",
+		"description": "appDescription",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"dependencies": {
+			"minUI5Version": "1.108.0",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {}
+			}
+		}, 
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "vendor.i18n.i18n",
+					"supportedLocales": [
+						""
+					],
+					"fallbackLocale": ""
+				}
+			},
+			"userTable" : {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/credential.json"
+			},
+			"cart" : {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/cart.json"
+			}
+			
+		},
+		"rootView": {
+			"viewName": "vendor.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"routing" : {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"type": "View",
+				"viewType": "XML",
+				"path": "vendor.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [
+				{
+					"pattern": "App",
+					"name": "App",
+					"target": ["App"]
+				},
+				{
+					"pattern": "",
+					"name": "LoginPage",
+					"target": ["LoginPage"]
+				}
+			],
+			"targets": {
+				"App" : {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App",
+					"viewName": "App"
+				},
+				"LoginPage" : {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "LoginPage",
+					"viewName": "LoginPage"
+				}
+			}
+		}
+	}
+}
