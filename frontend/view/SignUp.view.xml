@@ -1,9 +1,9 @@
 <mvc:View
-    controllerName="vendor.controller.LoginPage"
+    controllerName="vendor.controller.SignUp"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:form="sap.ui.layout.form">
-    <Page title="Login">
+    <Page title="Sign Up">
         <content>
             <VBox alignItems="Center" justifyContent="Center" height="100%">
                 <form:SimpleForm
@@ -24,11 +24,15 @@
                     singleContainerFullSize="false" >
                     <form:content>
                         <Label text="Username" />
-                        <Input id="usernameInput" placeholder="Enter your username" />
+                        <Input id="idUsernameInput" placeholder="Choose a username" />
+                        <Label text="Email" />
+                        <Input id="emailInput" type="Email" placeholder="Enter your email" />
                         <Label text="Password" />
-                        <Input id="passwordInput" type="Password" placeholder="Enter your password" />
-                        <Button text="Login" press="onLoginPress" type="Emphasized" width="100%" />
-                        <Link text="Create an account" press="onCreateAccountPress" />
+                        <Input id="idPasswordInput" type="Password" placeholder="Choose a password" />
+                        <Label text="Confirm Password" />
+                        <Input id="confirmPasswordInput" type="Password" placeholder="Confirm your password" />
+                        <Button text="Sign Up" press="onSignUpPress" type="Emphasized" width="100%" />
+                        <Link text="Already have an account? Login" press="onLoginPress" />
                     </form:content>
                 </form:SimpleForm>
             </VBox>

@@ -1,0 +1,14 @@
+<mvc:View
+    controllerName="vendor.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <App id="app">
+        <pages>
+            <Page id="App">
+                <content>
+                    <Text text="Texting Main Page"/>
+                </content>
+            </Page>
+        </pages>
+    </App>    
+</mvc:View>
