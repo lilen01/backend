@@ -1,4 +1,5 @@
-const url = "http://127.0.0.1:8080/about";
+const url = "http://localhost:8080/about";
+// const url = "http://127.0.0.1:8080/about";
 
 // Making a GET request using Fetch API
 fetch(url)
