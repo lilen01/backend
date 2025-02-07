@@ -22,8 +22,9 @@ app.get("/about", (req, res) => {
             console.log("Error: ", err);
             res.status(404).send("404 Page Not Found");
         } else {
-            const jsonData = JSON.parse(data);
-            res.json(jsonData.credentials[0]);
+            // const jsonData = JSON.parse(data);
+            data = JSON.parse(data);
+            res.json(data);
         }
     })
 })
