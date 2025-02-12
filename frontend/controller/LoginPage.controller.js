@@ -13,15 +13,23 @@ sap.ui.define([
         onLoginPress: function () {
             var username = this.byId("usernameInput").getValue();
             var password = this.byId("passwordInput").getValue();
+            var url = "http://localhost:8080/user/" + username;
 
             if (!username || !password) {
                 MessageBox.error("Please enter both username and password.");
                 return;
+            } else {
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log("User Data: ", data);
+                        if (data.userName == username && data.password == password) {
+                            MessageBox.success("Login successful! Welcome, " + username + "!");
+                        } else {
+                            MessageBox.error("Unauthorized attempt.");
+                        }
+                    });
             }
-
-            // Here you would typically make an AJAX call to your backend to verify credentials
-            // For this example, we'll just show a success message
-            MessageBox.success("Login successful! Welcome, " + username + "!");
 
             // Clear the input fields after successful login
             this.byId("usernameInput").setValue("");
@@ -30,8 +38,23 @@ sap.ui.define([
 
         onCreateAccountPress: function () {
             // Navigate to the Sign Up page
-            var oRouter = UIComponent.getRouterFor(this); // Use the imported UIComponent
-            oRouter.navTo("signup");
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("SignUp");
+        },
+
+        toPage1() {
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("Page1");
+        },
+
+        toPage2() {
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("Page2");
+        },
+
+        toSignUp() {
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("SignUp");
         }
     });
 });

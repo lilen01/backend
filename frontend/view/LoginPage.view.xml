@@ -3,6 +3,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:form="sap.ui.layout.form">
+    
     <Page title="Login">
         <content>
             <VBox alignItems="Center" justifyContent="Center" height="100%">
@@ -33,5 +34,13 @@
                 </form:SimpleForm>
             </VBox>
         </content>
+
+        <footer>
+            <Bar design="Footer">
+                <contentMiddle>
+                    <Button text="Sign Up" press="toSignUp" type="Emphasized"/>
+                </contentMiddle>
+            </Bar>
+        </footer>
     </Page>
 </mvc:View>

@@ -1,20 +1,23 @@
-{
-    "credentials": [
-      {
-        "id": "1d6a",
-        "userName": "lilen",
-        "password": "lilen@123",
-        "firstName": "Lilendra",
-        "lastName": "Bidkar",
-        "email": "lilen@gmail.com"
-      },
-      {
-        "id": "1fcc",
-        "userName": "ggbidkar",
-        "password": "ggbidkar",
-        "firstName": "Gopal",
-        "lastName": "Bidkar",
-        "email": "ggbidkar68@gmail.com"
-      }
-    ]
+[
+  {
+    "id": "1d6a",
+    "userName": "lilen",
+    "password": "lilen@123",
+    "firstName": "Lilendra",
+    "lastName": "Bidkar",
+    "email": "lilen@gmail.com"
+  },
+  {
+    "id": "1fcc",
+    "userName": "ggbidkar",
+    "password": "ggbidkar",
+    "firstName": "Gopal",
+    "lastName": "Bidkar",
+    "email": "ggbidkar68@gmail.com"
+  },
+  {
+    "userName": "lil",
+    "password": "lil",
+    "email": "lil"
   }
+]
