@@ -13,8 +13,10 @@ sap.ui.define([
         onLoginPress: function () {
             var username = this.byId("usernameInput").getValue();
             var password = this.byId("passwordInput").getValue();
-            var url = "http://localhost:8080/user/" + username;
+            var url = "http://localhost:3000/user/" + username;
 
+            console.log("URL: ", url);
+            
             if (!username || !password) {
                 MessageBox.error("Please enter both username and password.");
                 return;

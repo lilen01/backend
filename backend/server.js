@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
-const cors = require('cors')
+const cors = require('cors');
+// const routing = require('./Routes/route');
 
 
 const app = express();
@@ -9,14 +10,16 @@ app.use(cors());
 const PORT = 8080;
 // const link = "http://127.0.0.1:8080/";
 const link = "http://localhost:8080/";
-const userModelPath = "../model/user.json";
-const cartModelPath = "../model/cart.json";
+const userModelPath = "./Model/user.json";
+const cartModelPath = "./Model/cart.json";
 
 // userdefined logger - to log entries
 app.use((req, res, next) => {
     console.log(`hostname: ${req.hostname}, URL: ${req.url}, Method: ${req.method}`);
     next();
 });
+
+// app.use('/', routing);
 
 // send complete user.json model
 app.get("/user", (req, res) => {
@@ -95,37 +98,8 @@ app.post("/user", (req, res) => {
 
     fs.writeFileSync(userModelPath, JSON.stringify(credential), 'utf8');
     console.log("Written successfully");
-
-    // fs.readFile(userModelPath, 'utf8', (err, oData) => {
-    //     if (err) {
-    //         console.log("Error while readding user.json model");
-    //     } else {
-    //         const jsonData = JSON.parse(oData);
-    //         console.log(typeof jsonData);
-    //         var oList = jsonData.credentials;
-    //         oList.push(incomingData);
-
-    //         fs.writeFile(userModelPath, JSON.stringify(oList, null, 2), (err) => {
-    //             if (err) {
-    //                 console.log("Error while writing into file: ", err);
-    //             } else {
-    //                 console.log("Written successfully");
-    //                 res.status(200).json({ status: 'success'});
-        
-    //             }
-    //         });
-            
-    //     }
-    // });
-    
-
-    
-
     
 });
-
-
-       
 
 
 app.listen(PORT, () => {

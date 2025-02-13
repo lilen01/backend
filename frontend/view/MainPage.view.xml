@@ -1,0 +1,38 @@
+<mvc:XMLView
+    controllerName="vendor.controller.MainPage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page id="MainPage" showNavButton="true" navButtonPress="toLoginPage">
+        
+        <content>
+            <Table
+                id="userTable"
+                items="{userData>/user}"
+            >
+                <columns>
+                    <Column>
+                        <Text text="Username" />
+                    </Column>
+                    <Column>
+                        <Text text="email" />
+                    </Column>
+                    <Column>
+                        <Text text="password" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{userData>userName}" />
+                            <Text text="{userData>password}" />
+                            <Text text="{userData>email}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+
+        
+    </Page>
+</mvc:XMLView>

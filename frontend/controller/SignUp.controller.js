@@ -17,7 +17,7 @@ sap.ui.define([
             var email = this.byId("emailInput").getValue();
             var password = this.byId("idPasswordInput").getValue();
             var confirmPassword = this.byId("confirmPasswordInput").getValue();
-            var url = "http://localhost:8080/user";
+            var url = "http://localhost:3000/user";
 
             if (!username || !email || !password || !confirmPassword) {
                 MessageBox.error("Please fill in all fields.");
