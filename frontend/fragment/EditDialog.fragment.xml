@@ -1,0 +1,38 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Dialog 
+        id="idEditDialog"
+         showHeader="false">
+        <subHeader>
+            <Bar design="Header">
+                <contentMiddle>
+                    <Title text="Edit Task"/>
+                </contentMiddle>
+            </Bar>
+        </subHeader>
+        <content>
+            <VBox class="sapUiResponsiveMargin">
+                <HBox class="sapUiTinyMargin" alignItems="Center">
+                    <Label text="Username" width="4rem" class="sapUiTinyMarginEnd"/>
+                    <Input id="idEditUsername" value="{userData>userName}" type="Text" required="true" showClearIcon="true" width="12rem" />
+                </HBox>
+                <HBox class="sapUiTinyMargin" alignItems="Center">
+                    <Label text="Email" width="4rem" class="sapUiTinyMarginEnd"/>
+                    <Input id="idEditEmail" value="{userData>email}" type="Email" required="true" showClearIcon="true" width="12rem"/>
+                </HBox>
+                <HBox class="sapUiTinyMargin" alignItems="Center">
+                    <Label text="Password" width="4rem" class="sapUiTinyMarginEnd"/>
+                    <Input id="idEditPassword" value="{userData>password}" type="Password" required="true" showClearIcon="true" width="12rem"/>
+                </HBox>
+                
+                <HBox class="sapUiTinyMargin" alignItems="Center" justifyContent="Center">
+                    <Button icon="sap-icon://save" press="onSubmitEditUserData" type="Success" width="8rem"/>
+                </HBox>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button icon="sap-icon://decline" type="Reject" press="onCloseEditDialog"/>
+        </beginButton>    
+    </Dialog>    
+</core:FragmentDefinition>

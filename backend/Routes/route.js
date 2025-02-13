@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/user', myController.getAllUser);
 
 // get user by userName
-router.get('/user/:user', myController.getUserByUserName);
+router.get('/user/:userName', myController.getUserByUserName);
 
 // add user into user.json Model
 router.post('/user', myController.addUser);

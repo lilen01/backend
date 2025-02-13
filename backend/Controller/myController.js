@@ -24,7 +24,7 @@ getAllUser = (req, res) => {
 
 // get user by username from user.json model
 getUserByUserName = (req, res) => {
-    var username = req.params.user;
+    var username = req.params.userName;
     fs.readFile(userModelPath, 'utf8', (err, data) => {
         if (err) {
             console.log("Error: ", err);

@@ -9,6 +9,7 @@
             <Table
                 id="userTable"
                 items="{userData>/user}"
+                
             >
                 <columns>
                     <Column>
@@ -20,13 +21,17 @@
                     <Column>
                         <Text text="password" />
                     </Column>
+                    <Column hAlign="End">
+                        <Text text="Edit"></Text>
+                    </Column>
                 </columns>
                 <items>
                     <ColumnListItem>
                         <cells>
                             <Text text="{userData>userName}" />
-                            <Text text="{userData>password}" />
                             <Text text="{userData>email}" />
+                            <Text text="{userData>password}" />
+                            <Button icon="sap-icon://edit" press="editUserData"></Button>
                         </cells>
                     </ColumnListItem>
                 </items>
