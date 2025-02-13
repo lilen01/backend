@@ -72,28 +72,14 @@ sap.ui.define([
                 .catch(err => console.log("Error while creating account: ", err));
         },
 
-        reoveUser : function(oEvent) {
-            var oData = oEvent.getSource().getBindingContext('userData').getObject();
+        removeUser : function(oEvent) {
             var username = oEvent.getSource().getBindingContext('userData').getObject().userName;
 
             var oURL = url + '/' + username;
 
             fetch(oURL, {
                 method: 'DELETE'
-              })
-              .then(response => {
-                if (!response.ok) {
-                  throw new Error('Network response was not ok');
-                }
-                return response.json();
-              })
-              .then(result => {
-                console.log(result);
-              })
-              .catch(error => {
-                console.error('Error deleting user:', error);
-              });
-              
+              });              
         },
 
         toLoginPage : function () {

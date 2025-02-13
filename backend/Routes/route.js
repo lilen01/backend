@@ -15,4 +15,7 @@ router.post('/user', myController.addUser);
 //update existing data from user.json
 router.put('/user/:userName', myController.updateUser);
 
+// delete specific user from user.json (by username)
+router.delete('/user/:userName', myController.deleteUser);
+
 module.exports = router;

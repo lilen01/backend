@@ -35,7 +35,7 @@
                             <Text text="{userData>email}" />
                             <Text text="{userData>password}" />
                             <Button icon="sap-icon://edit" press="editUserData"/>
-                            <Button icon="sap-icon://delete" press="reoveUser"/>
+                            <Button icon="sap-icon://delete" press="removeUser"/>
                         </cells>
                     </ColumnListItem>
                 </items>

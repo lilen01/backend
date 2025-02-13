@@ -91,10 +91,24 @@ updateUser = async (req, res) => {
     res.status(200).json(userUpdate);
 };
 
+deleteUser = async (req, res) => {
+    var username = req.params.userName;
+
+    var file = await fh.readFile(userModelPath, 'utf8');    // in string format
+    var jsonData = JSON.parse(file);        // converted into json 
+
+    var oIndex = jsonData.findIndex(user => user.userName == username);
+    jsonData.splice(oIndex, 1);
+
+    await fh.writeFile(userModelPath, JSON.stringify(jsonData, null, 2));
+    res.status(200).ok;
+}
+
 
 module.exports = {
     getAllUser,
     getUserByUserName,
     addUser,
-    updateUser
+    updateUser,
+    deleteUser
 };
