@@ -4,7 +4,13 @@
     xmlns="sap.m"
 >
     <Page id="MainPage" showNavButton="true" navButtonPress="toLoginPage">
-        
+        <subHeader>
+            <Bar design="SubHeader">
+                <contentRight>
+                    <Button icon="sap-icon://add-employee" text="New User" press="addNewUser"/>
+                </contentRight>
+            </Bar>
+        </subHeader>
         <content>
             <Table
                 id="userTable"
