@@ -12,4 +12,7 @@ router.get('/user/:userName', myController.getUserByUserName);
 // add user into user.json Model
 router.post('/user', myController.addUser);
 
+//update existing data from user.json
+router.put('/user/:userName', myController.updateUser);
+
 module.exports = router;

@@ -77,30 +77,24 @@ addUser = async (req, res) => {
 // Update existing user data from user.json Model
 updateUser = async (req, res) => {
     let userUpdate = req.body;
-    var username = req.params.username
+    var username = req.params.userName;
+    
     var file = await fh.readFile(userModelPath, 'utf8');    // in string format
     var jsonData = JSON.parse(file);        // converted into json 
 
-    
+    var oIndex = jsonData.findIndex(user => user.userName == username);
+    console.log("oIndex: ", oIndex);
 
-    jsonData.push(newUser);
+    jsonData[oIndex] = userUpdate;
 
-    // fs.writeFileSync(userModelPath, JSON.stringify(jsonData, null, 2));
-    // res.json(newUser);
-
-    fs.writeFile(userModelPath, JSON.stringify(jsonData, null, 2), (err, data) => {
-        if (err) {
-            console.log("Error: ", err);
-        } else {
-            console.log("Written successfully");
-            res.status(200).json(newUser);
-        }
-    })
+    await fh.writeFile(userModelPath, JSON.stringify(jsonData, null, 2));
+    res.status(200).json(userUpdate);
 };
 
 
 module.exports = {
     getAllUser,
     getUserByUserName,
-    addUser
+    addUser,
+    updateUser
 };

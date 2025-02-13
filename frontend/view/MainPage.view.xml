@@ -9,7 +9,7 @@
             <Table
                 id="userTable"
                 items="{userData>/user}"
-                
+                alternateRowColors="true"
             >
                 <columns>
                     <Column>
@@ -21,7 +21,10 @@
                     <Column>
                         <Text text="password" />
                     </Column>
-                    <Column hAlign="End">
+                    <Column hAlign="Center">
+                        <Text text="Edit"></Text>
+                    </Column>
+                    <Column hAlign="Center">
                         <Text text="Edit"></Text>
                     </Column>
                 </columns>
@@ -31,7 +34,8 @@
                             <Text text="{userData>userName}" />
                             <Text text="{userData>email}" />
                             <Text text="{userData>password}" />
-                            <Button icon="sap-icon://edit" press="editUserData"></Button>
+                            <Button icon="sap-icon://edit" press="editUserData"/>
+                            <Button icon="sap-icon://delete" press="reoveUser"/>
                         </cells>
                     </ColumnListItem>
                 </items>

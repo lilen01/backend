@@ -59,7 +59,7 @@ sap.ui.define([
             var oURL = url + '/' + username;
 
             fetch(oURL, {
-                method : "POST",
+                method : "PUT",
                 headers: {
                     'Content-Type' : 'application/json'
                 },
@@ -72,7 +72,31 @@ sap.ui.define([
                 .catch(err => console.log("Error while creating account: ", err));
         },
 
-        toLoginPage: function () {
+        reoveUser : function(oEvent) {
+            var oData = oEvent.getSource().getBindingContext('userData').getObject();
+            var username = oEvent.getSource().getBindingContext('userData').getObject().userName;
+
+            var oURL = url + '/' + username;
+
+            fetch(oURL, {
+                method: 'DELETE'
+              })
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+                return response.json();
+              })
+              .then(result => {
+                console.log(result);
+              })
+              .catch(error => {
+                console.error('Error deleting user:', error);
+              });
+              
+        },
+
+        toLoginPage : function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.navTo("LoginPage");
         }
