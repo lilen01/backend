@@ -81,6 +81,11 @@
 					"pattern": "SignUp",
 					"name": "SignUp",
 					"target": ["SignUp"]
+				},
+				{
+					"pattern": "MainPage",
+					"name": "MainPage",
+					"target": ["MainPage"]
 				}
 			],
 			"targets": {
@@ -104,6 +109,13 @@
 					"clearControlAggregation": false,
 					"viewId": "SignUp",
 					"viewName": "SignUp"
+				},
+				"MainPage" : {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "MainPage",
+					"viewName": "MainPage"
 				}
 			}
 		}

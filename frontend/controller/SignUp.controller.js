@@ -63,6 +63,12 @@ sap.ui.define([
             // Navigate back to the Login page
             var oRouter = UIComponent.getRouterFor(this);
             oRouter.navTo("login");
+        },
+        
+        toLoginPage: function () {
+            // Navigate back to the Login page
+            var oRouter = UIComponent.getRouterFor(this);
+            oRouter.navTo("LoginPage");
         }
     });
 });

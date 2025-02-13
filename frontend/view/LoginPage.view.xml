@@ -39,6 +39,7 @@
             <Bar design="Footer">
                 <contentMiddle>
                     <Button text="Sign Up" press="toSignUp" type="Emphasized"/>
+                    <Button text="Main Page" press="toMainPage" type="Emphasized"/>
                 </contentMiddle>
             </Bar>
         </footer>

@@ -3,7 +3,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:form="sap.ui.layout.form">
-    <Page title="Sign Up">
+    <Page title="Sign Up" showNavButton="true" navButtonPress="toLoginPage">
         <content>
             <VBox alignItems="Center" justifyContent="Center" height="100%">
                 <form:SimpleForm

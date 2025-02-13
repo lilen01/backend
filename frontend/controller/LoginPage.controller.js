@@ -44,14 +44,9 @@ sap.ui.define([
             oRouter.navTo("SignUp");
         },
 
-        toPage1() {
+        toMainPage() {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.navTo("Page1");
-        },
-
-        toPage2() {
-            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.navTo("Page2");
+            oRouter.navTo("MainPage");
         },
 
         toSignUp() {
